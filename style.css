@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Inconsolata", monospace;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3rem 18rem;
+}
+
+header {
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.section {
+  transform: translateY(-100%);
+  transition: all 0.4s ease-in-out;
+  background-color: red;
+}
+
+.page-sections {
+  position: fixed;
+  z-index: 0;
+  top: 50%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+.page-sections .active-btn {
+  background-color: orange !important;
+  transition: all 0.45 ease-in-out;
+}
+.page-sections .active-btn i {
+  color: rebeccapurple !important;
+}
+.page-sections .pages {
+  padding: 1rem;
+  cursor: url(paw-solid.svg), cell;
+  background-color: aqua;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px 100px 35px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.69rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.page-sections .pages:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(120%);
+  background: rgba(215, 224, 82, 0.836);
+}
+.page-sections i {
+  font-size: 1.2rem;
+  pointer-events: auto;
+  color: rebeccapurple;
+}
+.page-sections i:hover {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

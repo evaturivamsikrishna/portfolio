@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NightBlogger</title>
+    <title style="font-family: 'Silkscreen', cursive;">Vamsi Krishna</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Silkscreen&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <div class="header"></div>
-    <div class="main"></div>
+    <div class="container">
+        <header class="section sec-0 header active"> Header </header>
+        <main>
+            <section class="section sec-1 about"></section>
+            <section class="section sec-2 skills"></section>
+            <section class="section sec-3 projects"></section>
+            <section class="section sec-4 contact"></section>
+        </main>
+
+       <div class="page-sections">
+           <div class="pages pages-0 ">
+            <i class="fa-solid fa-house-chimney active-btn"></i>
+           </div>
+           <div class="pages pages-1" data-id="about">
+            <i class="fa-solid fa-user-secret"></i>
+           </div>
+           <div class="pages pages-2" data-id="skills">
+            <i class="fa-solid fa-code-merge"></i>
+           </div>
+           <div class="pages pages-3" data-id="projects">
+            <i class="fa-solid fa-laptop-file"></i>
+           </div>
+           <div class="pages pages-4" data-id="contact">
+            <i class="fa-solid fa-id-card-clip"></i>
+           </div>
+
+        </div>
+    </div>
+    <footer></footer>
+    </div>
+    <script src="./script.js">  </script>
 </body>
+
 </html>
