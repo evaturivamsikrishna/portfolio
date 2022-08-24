@@ -1,13 +1,10 @@
-// Active button page
-const sectButton = document.querySelectorAll('.pages');
-
-function activePageSection(){
-    for(let i=0;i<sectButton.length;i++){
-        sectButton[i].addEventListener('click',function(){
-            let currentButton = document.querySelectorAll(".active-btn");
-            currentButton[0].className = currentButton[0].className.replace("active-btn","");
-            this.className += " active-btn";
+(function(){
+    [...document.querySelectorAll(".page")].forEach(button =>{
+        button.addEventListener("click",function(){
+            document.querySelector(".active-btn").classList.remove("active-btn");
+            this.classList.add("active-btn");
+            document.querySelector(".active").classList.remove("active");
+            document.getElementById(button.dataset.id).classList.add("active");
         })
-    }
-}
-activePageSection();
+    })
+})();

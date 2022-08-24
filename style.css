@@ -6,8 +6,18 @@
   font-family: "Inconsolata", monospace;
 }
 
+:root {
+  --color-1: #253744;
+  --color-2: #2e151B;
+  --color-3: #DA7B93;
+  --color-4: #376E6F;
+  --color-5: #1C3334;
+  --color-6: rgba(204, 148, 204, 0.897);
+}
+
 body {
   font-family: "Inconsolata", monospace;
+  background: black;
 }
 
 a {
@@ -35,33 +45,79 @@ header {
 .section {
   transform: translateY(-100%);
   transition: all 0.4s ease-in-out;
-  background-color: red;
 }
 
-.page-sections {
+.sec1 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec2 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec3 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec4 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec5 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.active {
+  display: block;
+  -webkit-animation: scaleAnim 5s ease-in-out;
+          animation: scaleAnim 5s ease-in-out;
+}
+@-webkit-keyframes scaleAnim {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes scaleAnim {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.pages {
   position: fixed;
   z-index: 0;
-  top: 50%;
-  left: 3%;
+  top: 55%;
+  left: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
 }
-.page-sections .active-btn {
-  background-color: orange !important;
+.pages .active-btn {
+  background-color: var(--color-4) !important;
   transition: all 0.45 ease-in-out;
 }
-.page-sections .active-btn i {
-  color: rebeccapurple !important;
+.pages .active-btn i {
+  color: white !important;
 }
-.page-sections .pages {
+.pages .page {
   padding: 1rem;
-  cursor: url(paw-solid.svg), cell;
-  background-color: aqua;
-  width: 40px;
-  height: 40px;
+  cursor: pointer;
+  background-color: var(--color-3);
+  width: 60px;
+  height: 60px;
   border-radius: 50px 100px 35px 35px;
   display: flex;
   align-items: center;
@@ -70,16 +126,103 @@ header {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.page-sections .pages:hover {
+.pages .page:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: scale(120%);
   background: rgba(215, 224, 82, 0.836);
 }
-.page-sections i {
+.pages i {
   font-size: 1.2rem;
-  pointer-events: auto;
+  pointer-events: none;
   color: rebeccapurple;
 }
-.page-sections i:hover {
-  color: red;
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+}
+.header-content .right-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header-content .right-header .image {
+  transition: all 19s ease;
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.header-content .right-header img {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header-content .left-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 18rem;
+}
+.header-content .left-header .name {
+  font-size: 1rem;
+}
+.header-content .left-header .name span {
+  color: var(--color-4);
+}
+.header-content .left-header p {
+  margin: 1.5rem 0;
+  line-height: 2rem;
+}
+
+.btn-con {
+  display: flex;
+  align-self: flex-start;
+}
+
+.main-btn {
+  cursor: pointer;
+  border-radius: 59px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-2);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.main-btn .btn-text {
+  padding: 2rem;
+}
+.main-btn .btn-icon {
+  background-color: var(--color-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 2rem;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+.main-btn:hover {
+  transition: all 0.4s ease-out;
+}
+.main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-2);
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
 }/*# sourceMappingURL=style.css.map */
