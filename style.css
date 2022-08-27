@@ -55,6 +55,7 @@ header {
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: yellowgreen;
 }
 
 .sec3 {
@@ -74,8 +75,8 @@ header {
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 5s ease-in-out;
-          animation: scaleAnim 5s ease-in-out;
+  -webkit-animation: scaleAnim 3s ease-in-out;
+          animation: scaleAnim 3s ease-in-out;
 }
 @-webkit-keyframes scaleAnim {
   0% {
@@ -106,8 +107,8 @@ header {
   transform: translateY(-60%);
 }
 .pages .active-btn {
-  background-color: var(--color-4) !important;
-  transition: all 0.45 ease-in-out;
+  background-color: #DA7B93 !important;
+  transition: all 1 ease-in-out;
 }
 .pages .active-btn i {
   color: white !important;
@@ -116,15 +117,19 @@ header {
   padding: 1rem;
   cursor: pointer;
   background-color: var(--color-3);
-  width: 60px;
-  height: 60px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50px 100px 35px 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0.69rem 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 63% 37% 43% 57%/55% 48% 52% 45%;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.pages::before {
+  border-radius: 63% 37% 58% 42%/60% 57% 43% 40%;
 }
 .pages .page:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -228,45 +233,77 @@ header {
 }
 
 .skill-box {
-  box-sizing: border-box;
+  box-sizing: content-box;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 4%;
+  row-gap: 1%;
+  flex-basis: 40%;
   width: 90%;
   height: 95%;
-  border: 2px solid white;
   margin-left: 2%;
   transform: translate(-50%, -50%);
   position: absolute;
   left: 50%;
   top: 50%;
-  overflow: hidden;
 }
 .skill-box .skills {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  border: 1px solid white;
-  margin: 2rem;
-  width: 10rem;
-  height: 10rem;
+  box-shadow: 1px 5px 8px 5px rgba(255, 8, 8, 0.478);
+  margin: 1rem;
+  width: 6rem;
+  height: 6rem;
   aspect-ratio: 1/1;
+  border-radius: 10%;
 }
 .skill-box .skills .skill-logo {
   left: 0;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   opacity: 1 !important;
 }
 .skill-box .skills .skill-title {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--color-4);
+  text-align: center;
+}
+.skill-box .skills:hover {
+  transform: scale(120%);
+}
+.skill-box .skill-section {
+  background-color: #DA7B93;
+  font-size: large;
+  z-index: 1;
+  margin: auto;
 }
 
-.skill-section {
-  border: 1px solid red;
+.about .about-container {
+  border: 2px solid white;
+  width: 80%;
+  height: 90vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.about .about-card {
+  min-width: 30%;
+  width: 30%;
+  height: 50%;
+  background-color: #2e151B;
+  margin: 2rem;
+  bottom: 0;
+  position: relative;
+  perspective: 50rem;
+}
+.about .front .back {
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */
