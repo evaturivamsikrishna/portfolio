@@ -107,7 +107,7 @@ header {
   transform: translateY(-60%);
 }
 .pages .active-btn {
-  background-color: #DA7B93 !important;
+  background-color: rgb(83, 5, 5) !important;
   transition: all 1 ease-in-out;
 }
 .pages .active-btn i {
@@ -116,16 +116,15 @@ header {
 .pages .page {
   padding: 1rem;
   cursor: pointer;
-  background-color: var(--color-3);
-  width: 4rem;
-  height: 4rem;
+  background-color: red;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50px 100px 35px 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0.69rem 0;
-  border-radius: 63% 37% 43% 57%/55% 48% 52% 45%;
-  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .pages::before {
@@ -139,7 +138,7 @@ header {
 .pages i {
   font-size: 1.2rem;
   pointer-events: none;
-  color: rebeccapurple;
+  color: black;
 }
 
 .header-content {
@@ -200,6 +199,7 @@ header {
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
+  height: 3rem;
 }
 .main-btn .btn-text {
   padding: 2rem;
